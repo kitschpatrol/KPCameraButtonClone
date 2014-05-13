@@ -1,7 +1,1 @@
 pod "KPCameraButtonClone", :path => "../KPCameraButtonClone.podspec"
-
-target "Demo" do
-end
-
-target "DemoTests" do
-end

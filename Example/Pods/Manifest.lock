@@ -1,0 +1,14 @@
+PODS:
+  - KPCameraButtonClone (0.1.0)
+
+DEPENDENCIES:
+  - KPCameraButtonClone (from `../KPCameraButtonClone.podspec`)
+
+EXTERNAL SOURCES:
+  KPCameraButtonClone:
+    :path: ../KPCameraButtonClone.podspec
+
+SPEC CHECKSUMS:
+  KPCameraButtonClone: b238f36e52cec0eaf892a88c7478db21af05bafa
+
+COCOAPODS: 0.29.0
