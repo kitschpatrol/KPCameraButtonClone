@@ -8,7 +8,7 @@ To run the example project; clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-pod 'KPCameraButtonClone', :git => 'https://github.com/kitschpatrol/KPCameraButtonClone.git'
+`pod 'KPCameraButtonClone', :git => 'https://github.com/kitschpatrol/KPCameraButtonClone.git'`
 
 ## Author
 
