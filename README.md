@@ -12,9 +12,11 @@ To run the example project; clone the repo, and run `pod install` from the Examp
 
 ## Author
 
-Eric Mika, ericmika@localprojects.net
+Eric Mika  
+eric@ericmika.com  
+[https://github.com/kitschpatrol](https://github.com/kitschpatrol)  
+[http://frontiernerds.com](http://frontiernerds.com)
 
 ## License
 
 KPCameraButtonClone is available under the MIT license. See the LICENSE file for more info.
-
