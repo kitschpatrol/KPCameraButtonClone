@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, KPCameraButtonMode) {
-    KPCameraButtonModePhoto,
-    KPCameraButtonModeVideoReady,
-    KPCameraButtonModeVideoRecording
+  KPCameraButtonModePhoto,         //
+  KPCameraButtonModeVideoReady,    //
+  KPCameraButtonModeVideoRecording //
 };
 
 @interface KPCameraButton : UIButton
