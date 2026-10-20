@@ -3,7 +3,7 @@
 //  CameraButtonCloneTests
 //
 //  Created by Eric Mika on 3/27/14.
-//  Copyright (c) 2014 Kitschpatrol. All rights reserved.
+//  Copyright (c) 2014 Kitschpatrol.
 //
 
 #import <XCTest/XCTest.h>

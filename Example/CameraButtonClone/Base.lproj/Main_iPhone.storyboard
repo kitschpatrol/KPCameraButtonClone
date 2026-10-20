@@ -32,7 +32,7 @@
                                 <segments>
                                     <segment title="Still"/>
                                     <segment title="Video"/>
-                                    <segment title="Recoding"/>
+                                    <segment title="Recording"/>
                                 </segments>
                                 <connections>
                                     <action selector="didChangeCameraButtonMode:" destination="vXZ-lx-hvc" eventType="valueChanged" id="QWd-aR-ziu"/>

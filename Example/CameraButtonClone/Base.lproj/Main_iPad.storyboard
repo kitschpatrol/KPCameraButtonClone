@@ -32,7 +32,7 @@
                                 <segments>
                                     <segment title="Still Photo"/>
                                     <segment title="Video Ready"/>
-                                    <segment title="Video Recoding"/>
+                                    <segment title="Video Recording"/>
                                 </segments>
                                 <connections>
                                     <action selector="didChangeCameraButtonMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="zeh-wr-IzS"/>

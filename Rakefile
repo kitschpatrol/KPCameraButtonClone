@@ -39,13 +39,13 @@ task :release do
   sh "rake version"
 
   unless ENV['SKIP_CHECKS']
-    if `git symbolic-ref HEAD 2>/dev/null`.strip.split('/').last != 'master'
-      $stderr.puts "[!] You need to be on the `master' branch in order to be able to do a release."
+    if `git symbolic-ref HEAD 2>/dev/null`.strip.split('/').last != 'main'
+      $stderr.puts "[!] You need to be on the `main' branch in order to be able to do a release."
       exit 1
     end
 
-    if `git tag`.strip.split("\n").include?(spec_version)
-      $stderr.puts "[!] A tag for version `#{spec_version}' already exists. Change the version in the podspec"
+    if `git tag`.strip.split("\n").include?("v#{spec_version}")
+      $stderr.puts "[!] A tag for version `v#{spec_version}' already exists. Change the version in the podspec"
       exit 1
     end
 
@@ -61,8 +61,8 @@ task :release do
 
   # Then release
   sh "git commit #{podspec_path} CHANGELOG.md -m 'Release #{spec_version}'"
-  sh "git tag -a #{spec_version} -m 'Release #{spec_version}'"
-  sh "git push origin master"
+  sh "git tag -a v#{spec_version} -m 'Release #{spec_version}'"
+  sh "git push origin main"
   sh "git push origin --tags"
   sh "pod push #{repo} #{podspec_path}"
 end
@@ -81,17 +81,17 @@ def remote_spec_version
   require 'cocoapods-core'
 
   if spec_file_exist_on_remote?
-    remote_spec = eval(`git show origin/master:#{podspec_path}`)
+    remote_spec = eval(`git show origin/main:#{podspec_path}`)
     remote_spec.version
   else
     nil
   end
 end
 
-# @return [Bool] If the remote repository has a copy of the podpesc file or not.
+# @return [Bool] If the remote repository has a copy of the podspec file or not.
 #
 def spec_file_exist_on_remote?
-  test_condition = `if git rev-parse --verify --quiet origin/master:#{podspec_path} >/dev/null;
+  test_condition = `if git rev-parse --verify --quiet origin/main:#{podspec_path} >/dev/null;
   then
   echo 'true'
   else
@@ -125,7 +125,7 @@ end
 # @param  [Pod::Version] version
 #         the version for which you need the next version
 #
-# @note   It is computed by bumping the last component of the versino string by 1.
+# @note   It is computed by bumping the last component of the version string by 1.
 #
 # @return [Pod::Version] The version that comes next after the version supplied.
 #
@@ -139,7 +139,7 @@ end
 # @param  [String] new_version_number
 #         the new version number
 #
-# @note   This methods replaces the version number in the podspec file with a new version number.
+# @note   This method replaces the version number in the podspec file with a new version number.
 #
 # @return void
 #

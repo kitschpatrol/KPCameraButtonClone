@@ -1,0 +1,37 @@
+{
+  "@context": "https://w3id.org/codemeta/3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "KPCameraButtonClone",
+  "version": "0.1.0",
+  "description": "Slavish reimplementation of the shape-morphing shutter button in Camera.app.",
+  "author": {
+    "@type": "Person",
+    "email": "eric@ericmika.com",
+    "name": "Eric Mika",
+    "url": "https://ericmika.com"
+  },
+  "keywords": [
+    "ios",
+    "objective-c",
+    "cocoapods",
+    "ui",
+    "camera",
+    "button"
+  ],
+  "programmingLanguage": "Objective-C",
+  "operatingSystem": [
+    "iOS >= 7.0"
+  ],
+  "url": "https://github.com/kitschpatrol/KPCameraButtonClone",
+  "codeRepository": "https://github.com/kitschpatrol/KPCameraButtonClone.git",
+  "issueTracker": "https://github.com/kitschpatrol/KPCameraButtonClone/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "dateCreated": "2014-03-28",
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "CocoaPods",
+      "url": "https://cocoapods.org"
+    }
+  ]
+}

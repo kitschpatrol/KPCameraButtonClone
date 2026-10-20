@@ -3,7 +3,7 @@
 //  CameraButtonClone
 //
 //  Created by Eric Mika on 3/27/14.
-//  Copyright (c) 2014 Kitschpatrol. All rights reserved.
+//  Copyright (c) 2014 Kitschpatrol.
 //
 
 #import "KPCameraButton.h"
@@ -123,7 +123,7 @@
       cameraButtonModeAnimation.removedOnCompletion = NO;
       [self.centerElementLayer addAnimation:cameraButtonModeAnimation forKey:@"KPCameraButtonModeVideoReadyColorAnimation"];
 
-      // Goes square
+      // Goes round
       CABasicAnimation *morph = [CABasicAnimation animationWithKeyPath:@"path"];
       morph.duration = animated ? 0.25 : 0.0; // Step 1
       morph.toValue = (id)self.notRecordingPath.CGPath;
@@ -142,7 +142,7 @@
       cameraButtonModeAnimation.removedOnCompletion = NO;
       [self.centerElementLayer addAnimation:cameraButtonModeAnimation forKey:@"KPCameraButtonModeVideoRecordingColorAnimation"];
 
-      // Goes round
+      // Goes square
       CABasicAnimation *morph = [CABasicAnimation animationWithKeyPath:@"path"];
       morph.duration = animated ? 0.25 : 0.0; // Step 1
       morph.toValue = (id)self.recordingPath.CGPath;
