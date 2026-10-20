@@ -44,8 +44,8 @@ task :release do
       exit 1
     end
 
-    if `git tag`.strip.split("\n").include?("v#{spec_version}")
-      $stderr.puts "[!] A tag for version `v#{spec_version}' already exists. Change the version in the podspec"
+    if `git tag`.strip.split("\n").include?(spec_version.to_s)
+      $stderr.puts "[!] A tag for version `#{spec_version}' already exists. Change the version in the podspec"
       exit 1
     end
 
@@ -61,7 +61,7 @@ task :release do
 
   # Then release
   sh "git commit #{podspec_path} CHANGELOG.md -m 'Release #{spec_version}'"
-  sh "git tag -a v#{spec_version} -m 'Release #{spec_version}'"
+  sh "git tag -a #{spec_version} -m 'Release #{spec_version}'"
   sh "git push origin main"
   sh "git push origin --tags"
   sh "pod push #{repo} #{podspec_path}"

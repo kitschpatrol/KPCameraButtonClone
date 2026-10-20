@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "KPCameraButtonClone"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "Reimplemnetation of Apple's Camera.app multi-use shutter button"
   s.homepage         = "http://EXAMPLE/NAME"
   s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"

@@ -2,7 +2,7 @@
   "@context": "https://w3id.org/codemeta/3.1",
   "@type": "SoftwareSourceCode",
   "name": "KPCameraButtonClone",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Slavish reimplementation of the shape-morphing shutter button in Camera.app.",
   "author": {
     "@type": "Person",
